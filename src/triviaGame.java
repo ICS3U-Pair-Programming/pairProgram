@@ -7,10 +7,10 @@ public class triviaGame {
     public void play(){
         
         // Stores all the questions in an array
-        String[] questions = {"\nquestion 1","\nquestion 2","\nquestion 3","\nquestion 4","\nquestion 5"};
+        String[] questions = {"\nWhere does milk come from?","\nM&Ms are made of?","\nWhat color is orange","\nWhat is Donut made of","\nWhich is better Pancakes or Waffles"};
 
         // Stores the correct answers in an array
-        String[] answer = {"a1","a2","a3","a4","a5"};
+        String[] answer = {"cow","chocolate","orange","batter","neither"};
 
         // Stores amount of correct answers
         int points = 0;
@@ -25,11 +25,11 @@ public class triviaGame {
             // Assemble the message (Should look like "Question 1 \n whatever question 1 is")
             message = message + "Question " + (i + 1) + questions[i];
 
-            // Get answer from user and make it lowercase
+            // Get answer from user and make it lower case
             guess = JOptionPane.showInputDialog(message,title).toLowerCase();
 
             // Check the guess against the right answer
-            if (guess == answer[i].toLowerCase()){
+            if (guess.equals(answer[i].toLowerCase())){
                 message = "Correct! +1 points\n\n";
                 points++;
             } else {
