@@ -25,11 +25,11 @@ public class triviaGame {
             // Assemble the message (Should look like "Question 1 \n whatever question 1 is")
             message = message + "Question " + (i + 1) + questions[i];
 
-            // Get answer from user and make it lowercase
+            // Get answer from user and make it lower case
             guess = JOptionPane.showInputDialog(message,title).toLowerCase();
 
             // Check the guess against the right answer
-            if (guess == answer[i].toLowerCase()){
+            if (guess.equals(answer[i].toLowerCase())){
                 message = "Correct! +1 points\n\n";
                 points++;
             } else {
